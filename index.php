@@ -1,9 +1,6 @@
 <?php
-$link = mysqli_connect("remotemysql.com", "fk5gNJOjoi", "bacElk3OeN")
+$link = mysqli_connect("remotemysql.com", "fk5gNJOjoi", "bacElk3OeN", "fk5gNJOjoi")
     or die("Не удалось соединиться с сервером");
-
-mysqli_select_db($link, "fk5gNJOjoi")
-    or die("Не удалось выбрать БД");
 
 if (!empty($_POST['text'] && !empty($_POST['name']))) {
     mysqli_query(
@@ -52,7 +49,7 @@ if (!empty($_POST['text'] && !empty($_POST['name']))) {
     mysqli_close($link);
     ?>
 
-    <form action="" method="POST">
+    <form action="index.php" method="POST">
         <textarea name="text" cols="30" rows="10"></textarea>
         <input type="text" name="name">
         <input type="submit" value="ok">
