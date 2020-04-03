@@ -33,7 +33,7 @@ if (!empty($_POST['text'] && !empty($_POST['name']))) {
 
     // mysqli_query("SET NAMES 'cp1251'");
 
-    $query = "SELECT * FROM book";
+    $query = "SELECT * FROM fk5";
     $result = mysqli_query($link, $query)
         or die("Не удалось выполнить запрос");
 
